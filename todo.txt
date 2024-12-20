@@ -1,0 +1,8 @@
+setup:
+- telescope check live multi grep
+- treesitter
+- LuaSnips,
+- try windows and inbuilt terminals
+- check auto build on save etc,
+- check obsidian setup for nvim?
+
