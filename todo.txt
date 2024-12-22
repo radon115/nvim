@@ -5,4 +5,9 @@ setup:
 - try windows and inbuilt terminals
 - check auto build on save etc,
 - check obsidian setup for nvim?
-
+- try Avante
+- fix .dotfiles
+- check treesitter-textobjects
+- fix harpoon config
+- configure pylsp
+- setup nvim dap
