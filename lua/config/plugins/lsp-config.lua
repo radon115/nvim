@@ -64,13 +64,30 @@ return {
         end,
       })
 
+      -- Show diagnostic messages
+      vim.diagnostic.config({ virtual_text = true })
+
+
       require('mason-lspconfig').setup({
-        ensure_installed = { "lua_ls" },
+        ensure_installed = { "lua_ls", "pylsp" },
         handlers = {
           -- this first function is the "default handler"
           -- it applies to every language server without a "custom handler"
           function(server_name)
             require('lspconfig')[server_name].setup({})
+          end,
+
+          pylsp = function()
+            require("lspconfig").pylsp.setup({
+              settings = {
+                pylsp = {
+                  plugins = {
+                    rope_autoimport = { enabled = true },
+                    -- rope_completion = { enabled = true },
+                  },
+                },
+              },
+            })
           end,
 
           lua_ls = function()

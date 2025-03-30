@@ -32,3 +32,4 @@ vim.opt.colorcolumn = "80"
 
 vim.opt.smartcase = true
 
+vim.opt.clipboard:append { 'unnamed', 'unnamedplus' }

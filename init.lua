@@ -16,3 +16,5 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 -- registering the python adapter
 -- https://github.com/mfussenegger/nvim-dap-python
 require("dap-python").setup("python3")
+
+vim.opt.clipboard:append { 'unnamed', 'unnamedplus' }
